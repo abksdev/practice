@@ -99,12 +99,14 @@ class OpOverloading{
 };
 
 ostream& operator << (ostream& out,const OpOverloading& obj){
-    cout << "value: " << obj.a << endl;
+    out << "value: " << obj.a << endl;
+    return out;
 }
 
 istream& operator >> (istream& in,OpOverloading& obj){
     cout << "Enter int value: ";
     in >> obj.a;
+    return in;
 }
 
 int main() {
